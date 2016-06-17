@@ -221,8 +221,8 @@ d3.json("nations.json", function(nations) {
 Certain parameters of the visualization such as axes, year labels and their variables along with the axes scales needed to be changed. Updated code here:  
 
 1. Updated Variable names
-```
 
+```
 function x(d) { return d.felony; }
 function y(d) { return d.misdemeanor; }
 function radius(d) { return d.population; }
@@ -253,17 +253,17 @@ var xScale = d3.scale.linear().domain([0, 3]).range([0, width]),
 ```
 
 There was also a need to create a python script to convert a csv file into the correct json format. Code for this here.
+
 ```
 import csv
 import json
 import sys, getopt
 
-'''
-To run (from inside this directory):
+
+//To run (from inside this directory):
 python data_converter.py -i ../data/data_clean.csv -o ../data/test.json
 (from main directory)
 python scripts/data_converter.py -i data/data_clean.csv -o data/test.json
-'''
 
 def main(argv):
   input_file = ''
