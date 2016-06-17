@@ -240,10 +240,13 @@ function key(d) { return d.county; }
     });
   }
 ```
+
 2. Updated Year Label
+
 ```
 var year = d3.interpolateNumber(2005, 2014);
 ```
+
 3. Updated Axes
 
 ```
