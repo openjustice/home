@@ -5,14 +5,17 @@ date:       2016-06-05
 summary:    Walkthrough of how to create such a visualization
 ---
 
-Are you interested in one of the datasets on the [OpenJustice CA portal][OJ], but you want visualize it differently from their default? This is a walkthrough of how two hackers at the [National Day of Civic Hacking][NDoCH] identified a deficiency [TKTK awkward wording] in one of the OpenJustice visualizations, and adapted a visualization of some other dataset to the OpenJustice data.
+Are you interested in one of the datasets on the [OpenJustice CA portal][OJ], but you want visualize it differently from their default? This is a walkthrough of how two hackers at the [National Day of Civic Hacking][NDoCH] identified a problem in one of the OpenJustice visualizations, and  created a new, better visualization to improve OpenJustice.
 
 [OJ]: http://openjustice.doj.ca.gov/
 [NDoCH]: https://www.eventbrite.com/e/national-day-of-civic-hacking-tickets-25188025061
 
+## Objective: Improve DOJ Visualization
 This is the OpenJustice visualization that <a href="https://github.com/saikirandulla" class="github-username">@saikirandulla</a> and <a href="https://github.com/aprilw" class="github-username">@aprilw</a> were looking at:
 
 ![msdemeanor vs felony arrests by county](images/existing_chart.png)
+
+## Limitation
 
 It plots [the rates of misdemeanor vs felony arrests by county](http://openjustice.doj.ca.gov/agencies/charts), providing a notion of the spread. They wondered, how has that changed over time? Well, you can filter by year:
 
