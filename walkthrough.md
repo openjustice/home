@@ -220,7 +220,7 @@ d3.json("nations.json", function(nations) {
 
 Certain parameters of the visualization such as axes, year labels and their variables along with the axes scales needed to be changed. Updated code here:  
 
-1. Updated Variable names
+Updated Variable names
 
 ```
 function x(d) { return d.felony; }
@@ -241,13 +241,13 @@ function key(d) { return d.county; }
   }
 ```
 
-2. Updated Year Label
+Updated Year Label
 
 ```
 var year = d3.interpolateNumber(2005, 2014);
 ```
 
-3. Updated Axes
+Updated Axes
 
 ```
 var xScale = d3.scale.linear().domain([0, 3]).range([0, width]),
