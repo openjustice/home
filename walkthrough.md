@@ -218,8 +218,38 @@ d3.json("nations.json", function(nations) {
 
 ##Changes to the Code
 
+Certain parameters of the visualization such as axes, year labels and their variables along with the axes scales needed to be changed. Updated code here:  
+
+1. Updated Variable names
 ```
-Insert the changes to code here
+
+function x(d) { return d.felony; }
+function y(d) { return d.misdemeanor; }
+function radius(d) { return d.population; }
+function color(d) { return d.county; }
+function key(d) { return d.county; }
+
+  function interpolateData(year) {
+    return counties.map(function(d) {
+      return {
+        county: d.county,
+        felony: parseFloat(interpolateValues(d.felony, year)).toFixed(2),
+        population: Math.round(interpolateValues(d.population, year)),
+        misdemeanor: parseFloat(interpolateValues(d.misdemeanor, year)).toFixed(2)
+      };
+    });
+  }
+```
+2. Updated Year Label
+```
+var year = d3.interpolateNumber(2005, 2014);
+```
+3. Updated Axes
+
+```
+var xScale = d3.scale.linear().domain([0, 3]).range([0, width]),
+    yScale = d3.scale.linear().domain([0, 3.5]).range([height, 0]),
+    radiusScale = d3.scale.sqrt().domain([0, 4e6]).range([0, 40]),
 ```
 
 There was also a need to create a python script to convert a csv file into the correct json format. Code for this here.
